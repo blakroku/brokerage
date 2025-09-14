@@ -8,7 +8,7 @@
             <h1>Welcome, Investor</h1>
         </div>
         <div>
-            <form role="form" action="/register" method="POST">
+            <form role="form" action="/enroll" method="POST">
 
                 @csrf
 
@@ -24,6 +24,15 @@
                     <input type="text" name="email" id="email" placeholder="Email"
                         class="w-full p-2 border border-black rounded-sm">
                     @error('email')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+
+                <div class="mb-4">
+                    <input type="text" name="mobile" id="mobile" placeholder="Mobile Number"
+                        class="w-full p-2 border border-black rounded-sm">
+                    @error('mobile')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>

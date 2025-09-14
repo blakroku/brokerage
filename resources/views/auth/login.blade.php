@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Enroll')
+@section('title', 'Login')
 
 @section('main')
     <section class="w-[400px] mx-auto mt-16">
@@ -14,13 +14,13 @@
 
                 <div class="mb-4">
                     <input type="text" name="email" id="email" placeholder="Email"
-                        class="w-full p-2 border border-black rounded-sm">
+                        class="w-full p-2 border border-black rounded-sm" value="{{ old('email') }}">
                     @error('email')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="mb-4">
-                    <input type="text" name="password" id="password" placeholder="Password"
+                    <input type="password" name="password" id="password" placeholder="Password"
                         class="w-full p-2 border border-black rounded-sm">
                     @error('password')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>

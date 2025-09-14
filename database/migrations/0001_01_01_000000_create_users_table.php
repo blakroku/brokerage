@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('role')->default(UserRole::Investor()); // enum: brokerage, investor
-            $table->string('mobile');
+            $table->string('mobile')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
