@@ -3,7 +3,7 @@
 @section('title', 'Enroll')
 
 @section('main')
-    <section class="w-[400px] mx-auto mt-16">
+    <section class="w-full lg:w-[400px] mx-auto mt-16">
         <div class="mb-4">
             <h1>Welcome, Investor</h1>
         </div>
